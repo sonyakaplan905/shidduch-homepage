@@ -153,6 +153,34 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
   .reveal.in{opacity:1;transform:none;}
 
+  /* ---------- Resume modal ---------- */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;
+    align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-box{
+    background:#fff;color:#000;max-width:640px;width:100%;position:relative;
+    padding:50px 50px 40px;font-family:'Inter',sans-serif;border-radius:2px;
+  }
+  .modal-close{
+    position:absolute;top:14px;right:18px;background:none;border:none;font-size:26px;
+    line-height:1;color:#000;cursor:pointer;
+  }
+  .resume-doc{color:#000;}
+  .resume-doc .r-tag{text-align:center;font-size:10.5px;letter-spacing:.16em;color:#000;margin-bottom:4px;font-weight:700;}
+  .resume-doc .r-sub{text-align:center;font-size:11px;color:#444;margin-bottom:22px;font-style:italic;}
+  .resume-doc .r-name{text-align:center;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;margin-bottom:6px;}
+  .resume-doc .r-line{text-align:center;font-size:13px;margin-bottom:3px;}
+  .resume-doc h4{
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #000;
+    padding-bottom:4px;margin:22px 0 8px;font-weight:700;
+  }
+  .resume-doc p{font-size:13px;margin-bottom:5px;line-height:1.5;}
+  .resume-doc .r-bold{font-weight:700;}
+  .modal-foot{margin-top:26px;border-top:1px solid #ccc;padding-top:16px;text-align:center;}
+  .modal-foot a{font-size:12px;font-weight:700;color:#000;text-decoration:underline;}
+
   /* ---------- Responsive ---------- */
   @media (max-width:1080px){
     .feature-grid{grid-template-columns:repeat(3,1fr);gap:30px 0;}
@@ -181,7 +209,7 @@
 
   <div class="header-top">
     <div class="brand">
-      <img src="https://drive.google.com/file/d/1zyEOvNCWw7bYr5IM430PKFLgKQjpDoSY/preview"alt="The Thornhill Shidduch Centre logo">
+      <img src="assets/logo.png" alt="The Thornhill Shidduch Centre logo">
     </div>
     <div class="header-right">
       <a class="donate-btn" href="https://koy.shulcloud.com/payment.php" target="_blank" rel="noopener">Donate</a>
@@ -199,7 +227,7 @@
         <li><a href="#resources">Resources</a></li>
         <li><a href="#haskamos">Haskamos</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="mailto:sonyakaplan@gmail.com">Contact</a></li>
+        <li><a href="mailto:sonyakaplan905@gmail.com">Contact</a></li>
       </ul>
       <a class="nav-cta" href="https://shidduch-form.vercel.app" target="_blank" rel="noopener">Register a Profile</a>
       <button class="burger" id="burgerBtn" aria-label="Menu">&#9776;</button>
@@ -214,15 +242,20 @@
       <a class="btn btn-primary" href="https://shidduch-form.vercel.app" target="_blank" rel="noopener">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
-      <img src="https://drive.google.com/file/d/1zyEOvNCWw7bYr5IM430PKFLgKQjpDoSY/preview" alt="The Thornhill Shidduch Centre — acrylic chuppah with gold ring logo">
+      <img src="assets/logo.png" alt="The Thornhill Shidduch Centre — acrylic chuppah with gold ring logo">
     </div>
   </section>
 
   <section class="section reveal" id="about" style="padding-top:20px;">
+    <div class="pasuk" style="max-width:640px;margin:0 auto 50px;text-align:center;">
+      <p dir="rtl" lang="he" style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--navy);line-height:1.7;margin-bottom:14px;">לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ; אֶעֱשֶׂה־לּוֹ עֵזֶר כְּנֶגְדּוֹ</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--muted);margin-bottom:8px;">&ldquo;It is not good for man to be alone; I will make a fitting partner for him.&rdquo;</p>
+      <p style="font-size:12px;letter-spacing:.1em;color:var(--gold);">&mdash; בראשית ב:י״ח</p>
+    </div>
     <div class="section-head" style="max-width:760px;">
       <div class="eyebrow">Our Story</div>
       <h2>Why We Started This</h2>
-      <p style="line-height:1.8;">The Thornhill Shidduch Centre began with a simple observation: Make it make Sense. Too many resumes were getting lost, too many families were unsure where to turn, and too many singles and parents felt like they were figuring it out alone. This project exists to change that &mdash; to give Thornhill's singles and their families a trusted, place to register once, and be supported along the way. Our goal is simple &mdash; to serve our own community's singles and families with the care, organization, and dignity this process deserves.</p>
+      <p style="line-height:1.8;">The Thornhill Shidduch Centre began with a simple observation: singles and families in our own community needed a more organized, more caring way to navigate the shidduch process. Too many resumes were getting lost, too many families were unsure where to turn, and too many singles felt like they were figuring it out alone. This project exists to change that &mdash; to give Thornhill's singles and their families a trusted, well-run home base: a place to register once, be taken seriously, and be supported with real resources along the way. Our goal is simple &mdash; to serve our own community's singles and families with the care, organization, and dignity this process deserves.</p>
     </div>
   </section>
 
@@ -297,7 +330,7 @@
           <li>Formatting &amp; wording review</li>
           <li>Reference guidance</li>
         </ul>
-        <p style="margin-top:14px;margin-bottom:0;"><a href="assets/sample-shidduch-resume-template.docx" download style="font-weight:700;color:var(--gold);">Download a sample resume template &rarr;</a></p>
+        <p style="margin-top:14px;margin-bottom:0;"><a href="#" onclick="document.getElementById('resumeModal').classList.add('open');return false;" style="font-weight:700;color:var(--gold);">View a sample resume &rarr;</a></p>
       </div>
       <div class="resource-card reveal">
         <div class="num">03</div>
@@ -380,7 +413,61 @@
     </div>
   </footer>
 
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="document.getElementById('resumeModal').classList.remove('open');" aria-label="Close">&times;</button>
+      <div class="resume-doc">
+        <div class="r-tag">SAMPLE SHIDDUCH RESUME &mdash; TEMPLATE</div>
+        <div class="r-sub">The Thornhill Shidduch Centre &nbsp;&middot;&nbsp; replace the sample details below with your own</div>
+        <div class="r-name">Chaya Rivka Berkowitz</div>
+        <div class="r-line">123 Maple Grove Avenue, Thornhill, ON</div>
+        <div class="r-line">Date of Birth: 14 Sivan 5761 (June 5, 2001) &nbsp;|&nbsp; Height: 5'4"</div>
+        <div class="r-line">Mother's Cell: (416) 555-0142</div>
+
+        <h4>Parents</h4>
+        <p class="r-bold">Mr. &amp; Mrs. Avraham and Devora Berkowitz</p>
+
+        <h4>Siblings</h4>
+        <p>Shira (22) &mdash; teaching at Bais Yaakov High School, Thornhill</p>
+        <p>Dovid (19) &mdash; learning at Yeshivas Ohr Yosef, Toronto</p>
+        <p>Malka (married to Yosef Klein) &mdash; living in Chicago, IL</p>
+
+        <h4>Education</h4>
+        <p>Bais Yaakov High School, Thornhill &mdash; graduated 2019</p>
+        <p>Seminary &mdash; Machon Ora, Jerusalem, 2019&ndash;2020</p>
+
+        <h4>Camps <span style="text-transform:none;font-weight:400;">(optional)</span></h4>
+        <p>Camp Bnos Chomesh &mdash; camper, then staff, 2015&ndash;2021</p>
+
+        <h4>Employment</h4>
+        <p>Kindergarten teacher, Associated Hebrew Schools, Toronto &mdash; 2021&ndash;present</p>
+
+        <h4>Shul</h4>
+        <p>BAYT (Beth Avraham Yoseph of Toronto)</p>
+
+        <h4>Personal References</h4>
+        <p>Mrs. Aviva Stern (seminary roommate) &mdash; (416) 555-0118</p>
+        <p>Mrs. Rochel Fine (employer) &mdash; (416) 555-0193</p>
+
+        <h4>Family References</h4>
+        <p>Rabbi Shlomo Adler (uncle) &mdash; (905) 555-0176</p>
+        <p>Mrs. Esther Goldstein (aunt) &mdash; (416) 555-0129</p>
+
+        <h4>Friends</h4>
+        <p>Miss Tzipora Weiss &mdash; (647) 555-0184</p>
+        <p>Miss Baila Rosen &mdash; (416) 555-0157</p>
+
+        <div class="modal-foot">
+          <a href="assets/sample-shidduch-resume-template.docx" download>Download an editable Word version</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script>
+  const resumeModal = document.getElementById('resumeModal');
+  resumeModal.addEventListener('click', (e) => { if (e.target === resumeModal) resumeModal.classList.remove('open'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') resumeModal.classList.remove('open'); });
   const burger = document.getElementById('burgerBtn');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
