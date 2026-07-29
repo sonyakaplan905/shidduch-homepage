@@ -34,7 +34,7 @@
     display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
   }
   .brand{display:flex;align-items:center;}
-  .brand img{height:104px;width:auto;}
+  .brand img{height:110px;width:auto;max-width:100%;}
   .quote-block{
     max-width:430px;font-family:'Cormorant Garamond',serif;
     font-size:15px;color:var(--muted);text-align:right;position:relative;
@@ -209,10 +209,10 @@
   .resume-doc .r-name{text-align:center;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;margin-bottom:6px;}
   .resume-doc .r-line{text-align:center;font-size:13px;margin-bottom:3px;}
   .resume-doc h4{
-    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #000;
-    padding-bottom:4px;margin:22px 0 8px;font-weight:700;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    margin:24px 0 8px;font-weight:700;color:#000;
   }
-  .resume-doc p{font-size:13px;margin-bottom:5px;line-height:1.5;}
+  .resume-doc p{font-size:13.5px;margin-bottom:5px;line-height:1.6;}
   .resume-doc .r-bold{font-weight:700;}
   .modal-foot{margin-top:26px;border-top:1px solid #ccc;padding-top:16px;text-align:center;}
   .modal-foot a{font-size:12px;font-weight:700;color:#000;text-decoration:underline;}
@@ -270,7 +270,7 @@
 
   <div class="header-top" style="justify-content:flex-start;">
     <div class="brand">
-      <img src="assets/logo.png" alt="The Thornhill Shidduch Centre logo">
+      <img src="assets/logo-banner.png" alt="The Thornhill Shidduch Centre — Connecting Hearts. Building Futures.">
     </div>
   </div>
 
@@ -280,7 +280,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resources">Resources</a></li>
-        <li><a href="#haskamos">Haskama</a></li>
+        <li><a href="#haskamos">Haskamos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Contact</a></li>
         <li><a href="https://koy.shulcloud.com/payment.php" target="_blank" rel="noopener">Donate</a></li>
@@ -294,7 +294,7 @@
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
       <h2>Making <em>local</em> shidduchim<br>a little easier to find.</h2>
-      <p class="lede">An online resource for Thornhill singles and families navigating the shidduch world &mdash; from resume help and coaching, to Torah classes and a trusted registry that keeps every profile organized and current for local shadchanim.</p>
+      <p class="lede">A resource for Toronto singles and families navigating the shidduch world &mdash; from resume help and coaching to Torah classes and a trusted registry that keeps every profile organized and current for local shadchanim.</p>
       <a class="btn btn-primary" href="https://shidduch-form.vercel.app" target="_blank" rel="noopener">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
@@ -448,7 +448,7 @@
         <button class="resource-toggle" onclick="toggleResourceCard('card-other-resources')">
           <span class="num">04</span>
           <span class="rt-main">
-            <h3>Other Established Resources</h3>
+            <h3>Additional Resources</h3>
             <span class="rt-teaser">Broader Toronto organizations that connect you with a wide network of shadchanim.</span>
           </span>
           <span class="rplus">+</span>
@@ -499,8 +499,8 @@
         <div id="dirContent-toronto">
           <div class="dir-subhead">Thornhill</div>
           <ul class="directory-list">
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rebbetzin Sara Bitterman','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:Sara.bitterman@gmail.com&quot;&gt;Sara.bitterman@gmail.com&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;tel:4164598082&quot;&gt;(416) 459-8082&lt;/a&gt;')">Sara Bitterman</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Sonya Kaplan','Mainstream, YU Machmir, Modern Orthodox &mdash;','&lt;a href=&quot;mailto:sonyakaplan@gmail.com&quot;&gt;sonyakaplan@gmail.com&lt;/a&gt;')">Sonya Kaplan</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Sara Bitterman','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:Sara.bitterman@gmail.com&quot;&gt;Sara.bitterman@gmail.com&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;tel:4164598082&quot;&gt;(416) 459-8082&lt;/a&gt;')">Sara Bitterman</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Sonya Kaplan','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:sonyakaplan@gmail.com&quot;&gt;sonyakaplan@gmail.com&lt;/a&gt;')">Sonya Kaplan</button></li>
           </ul>
           <div class="dir-subhead">Toronto</div>
           <ul class="directory-list">
@@ -522,16 +522,15 @@
         </div>
 
         <div id="dirContent-outoftown">
-          <p style="color:var(--muted);font-size:13.5px;margin-bottom:16px;">List of individual out-of-town shadchanim coming soon &mdash; check back shortly.</p>
-          <div class="dir-subhead">General Resource</div>
           <ul class="directory-list">
+            <li><a href="https://www.tsinitiative.org/" target="_blank" rel="noopener">Toronto Shidduch Initiative</a> &ndash; maintains connections with shadchanim outside Toronto</li>
             <li><a href="http://ShidduchDatingForDummies.com" target="_blank" rel="noopener">ShidduchDatingForDummies.com</a> &ndash; a general shidduch resource site</li>
           </ul>
         </div>
 
         <div id="dirContent-coaches">
           <ul class="directory-list">
-            <li>Leah Berman Spiro (New York) &ndash; Dating Coach &ndash; <a href="tel:5166660471">(516) 666-0471</a></li>
+            <li>Leia Berman Spiro (New York) &ndash; Dating Coach &ndash; <a href="tel:5166660471">(516) 666-0471</a></li>
           </ul>
         </div>
 
@@ -573,7 +572,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Is there a cost to register or use your resources?<span class="plus">+</span></button>
-        <div class="faq-a"><p>There is no cost. Registration and our classes are offered as a community resource. We rely on donations to keep it that way &mdash; see our Donate section below.</p></div>
+        <div class="faq-a"><p>Registration and our classes and coaching are offered as a community resource. We rely on donations to keep it that way &mdash; see our Donate section below.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How do I sign up for resume help or coaching?<span class="plus">+</span></button>
@@ -585,20 +584,20 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Where can I go on a date in Toronto?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The Toronto Shidduch Initiative keeps an up-to-date list of hotel lounges, restaurants, and activities around the city &mdash; <a href="https://www.tsinitiative.org/dating-in-toronto/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">see their Dating in Toronto guide</a>.</p></div>
+        <div class="faq-a"><p><a href="https://notanotherlounge.com/locations/?generalarea=toronto" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Not Another Lounge</a> is a great place to browse date spot ideas around Toronto &mdash; restaurants, lounges, and casual date locations, filterable by type and price. For minyan times while you're planning around a date, <a href="https://thornhillkollel.com/zemanim/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Thornhill Kollel</a> and <a href="https://www.bayt.ca/calendar" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">BAYT's website</a> keep up-to-date schedules. For all other Toronto-related dating info, <a href="https://www.tsinitiative.org/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">the Toronto Shidduch Initiative</a> is a great place to check directly.</p></div>
       </div>
     </div>
   </section>
 
   <section class="donate-band reveal" id="donate">
     <h2>Support Our Work</h2>
-    <p>Classes, coaching, resume help, and this registry are made possible by community support. Every contribution helps a single or a family move forward.</p>
+    <p>All donations support the ongoing Torah learning at Kollel Ohr Yosef. The Thornhill Shidduch Centre itself does not, and will not, solicit money.</p>
     <a class="btn" href="https://koy.shulcloud.com/payment.php" target="_blank" rel="noopener">Donate</a>
   </section>
 
   <footer>
     <div class="foot-inner" style="flex-direction:column;gap:6px;text-align:center;margin-bottom:24px;justify-content:center;">
-      <div dir="rtl" lang="he" style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);">    לזכר נשמת  דניאל בן מאיר ז״ל    &  רייזל ביילא בת יצחק ז״ל</div>
+      <div dir="rtl" lang="he" style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);">לזכר נשמת דניאל בן מאיר ז״ל &amp; רייזל ביילא בת יצחק ז״ל</div>
     </div>
     <div class="foot-inner">
       <div>
@@ -674,43 +673,43 @@
       <div class="resume-doc">
         <div class="r-tag">SAMPLE SHIDDUCH RESUME &mdash; TEMPLATE</div>
         <div class="r-sub">The Thornhill Shidduch Centre &nbsp;&middot;&nbsp; all names, numbers, and details below are fictional</div>
-        <div class="r-name">Shira Adler</div>
+        <div class="r-name">Rivka Adler</div>
         <div class="r-line">Thornhill, ON</div>
-        <div class="r-line">03-22-2001 &nbsp;Height: 5'3"</div>
+        <div class="r-line">03-22-2001 &nbsp;Height: 5'4"</div>
 
         <h4>Family</h4>
-        <p>Avi &ndash; Real Estate, Adler Properties</p>
-        <p>Penina (n&eacute;e Kessler) &ndash; Homemaker</p>
+        <p>Yankel &ndash; Real Estate, Adler Properties</p>
+        <p>Chana (n&eacute;e Kessler) &ndash; Homemaker</p>
 
         <h4>Shul</h4>
-        <p>Kollel Ohr Yosef</p>
-        <p>Rabbi Mordechai Scheiner, Rosh Kollel &ndash; (416) 555-0147</p>
+        <p>Clanton Park Synagogue</p>
+        <p>Rabbi Aaron Levine &ndash; (416) 555-0147</p>
 
         <h4>Siblings</h4>
-        <p>Moshe (20) &ndash; Praegers Yeshiva, Israel</p>
-        <p>Devora (16) &ndash; Bais Yaakov High School</p>
-        <p>Yehuda (12) &ndash; Yesodei HaTorah Toronto</p>
+        <p>Moshe &ndash; Yeshiva Gedola of Toronto</p>
+        <p>Devora &ndash; Bais Yaakov Elementary, Grade 6</p>
+        <p>Yehuda &ndash; learning in Eretz Yisroel</p>
 
         <h4>Grandparents</h4>
-        <p>Paul and Eva Adler</p>
-        <p>Dovid and Leah Stein</p>
+        <p>Shlomo and Miriam Adler</p>
+        <p>Dovid and Leah Kessler</p>
 
         <h4>Currently</h4>
-        <p>Special Education Teacher, Bais Yaakov Elementary</p>
+        <p>Special Education Teacher, Associated Hebrew Schools</p>
         <p>Pursuing certification in Speech-Language Pathology</p>
 
         <h4>Education</h4>
-        <p>Seminary &ndash; Machon Sarah, Israel  <p>
-        <p>High School &ndash; Bais Yaakov High School, Toronto</p>
-        <p>Elementary &ndash; Eitz Chaim Elementary</p>
+        <p>Seminary &ndash; Michlala Jerusalem College</p>
+        <p>High School &ndash; Bais Yaakov High School, Thornhill</p>
+        <p>Elementary &ndash; Associated Hebrew Schools</p>
 
         <h4>Camps</h4>
         <p>Camp Simcha &ndash; 2022&ndash;current, Division Head</p>
-        <p>Camp Agudah &ndash; 2018&ndash;2021, Counselour</p>
+        <p>Camp Bnos Chomesh &ndash; 2018&ndash;2021, Counselor</p>
 
         <h4>Family References</h4>
-        <p>Tsvi & Dahlia Stern &ndash; (416) 555-0118</p>
-        <p>Yehuda & Yehudis Katz &ndash; (905) 555-0193</p>
+        <p>Malka Stern &ndash; (416) 555-0118</p>
+        <p>Yehudis Katz &ndash; (905) 555-0193</p>
 
         <h4>Friend References</h4>
         <p>Baila Rosen &ndash; (647) 555-0184</p>
