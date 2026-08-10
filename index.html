@@ -28,6 +28,31 @@
   button{font-family:inherit;cursor:pointer;}
   .wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
 
+  /* ---------- Text Header Banner ---------- */
+  .site-banner{
+    background-color:var(--cream);
+    text-align:center;
+    padding:2.5rem 1rem 1.5rem;
+  }
+  .site-banner-eyebrow{
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.2em;
+    color:var(--gold);
+    margin-bottom:.5rem;
+  }
+  .site-banner-title{
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:1.9rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0;
+  }
+
   /* ---------- Header ---------- */
   .header-top{
     max-width:1240px;margin:0 auto;padding:24px 32px 20px;
@@ -268,10 +293,9 @@
 </head>
 <body>
 
-  <div class="header-top" style="justify-content:flex-start;">
-    <div class="brand">
-      <img src="assets/logo-banner.png" alt="The Thornhill Shidduch Centre — Connecting Hearts. Building Futures.">
-    </div>
+  <div class="site-banner">
+    <span class="site-banner-eyebrow">THE</span>
+    <h1 class="site-banner-title">Thornhill Shidduch Centre</h1>
   </div>
 
   <nav class="mainnav">
@@ -294,8 +318,8 @@
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
       <h2>Making <em>local</em> shidduchim<br>a little easier to find.</h2>
-      <p class="lede">A resource for Toronto singles and families navigating the shidduch world &mdash; from resume help and coaching to Torah classes and a trusted registry that keeps every profile organized and current for local shadchanim.</p>
-      <a class="btn btn-primary" href="https://shidduch-form.vercel.app" target="_blank" rel="noopener">Register a Profile</a>
+      <p class="lede">An online resource for Thornhill singles and families navigating the shidduch world &mdash; from resume help and coaching, to Torah classes and a trusted registry that keeps every profile organized and current for local shadchanim.</p>
+      <a class="btn btn-primary" href="/register">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
       <img src="assets/logo.png" alt="The Thornhill Shidduch Centre — acrylic chuppah with gold ring logo">
@@ -680,10 +704,6 @@
         <h4>Family</h4>
         <p>Yankel &ndash; Real Estate, Adler Properties</p>
         <p>Chana (n&eacute;e Kessler) &ndash; Homemaker</p>
-
-        <h4>Shul</h4>
-        <p>Clanton Park Synagogue</p>
-        <p>Rabbi Aaron Levine &ndash; (416) 555-0147</p>
 
         <h4>Siblings</h4>
         <p>Moshe &ndash; Yeshiva Gedola of Toronto</p>
