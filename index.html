@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Thornhill Shidduch Centre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#FFFFFF;
@@ -34,10 +34,26 @@
     text-align:center;
     padding:1.5rem 1rem;
   }
+  .site-banner-welcome{
+    font-family:'Dancing Script',cursive;
+    font-weight:600;
+    font-size:1.7rem;
+    color:var(--gold);
+    margin-bottom:.15rem;
+  }
   .site-banner-logo{
     height:56px;
     width:auto;
-    margin:0 auto;
+    margin:.25rem auto;
+  }
+  .site-banner-name{
+    font-family:'Inter',sans-serif;
+    font-weight:700;
+    font-size:.75rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-top:.35rem;
   }
 
   /* ---------- Header ---------- */
@@ -281,7 +297,9 @@
 <body>
 
   <div class="site-banner">
+    <div class="site-banner-welcome">Welcome to</div>
     <img src="assets/logo.png" alt="The Thornhill Shidduch Centre" class="site-banner-logo">
+    <div class="site-banner-name">The Thornhill Shidduch Centre</div>
   </div>
 
   <nav class="mainnav">
@@ -303,7 +321,7 @@
   <section class="hero" id="home">
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
-      <h2>A community coming together<br>for every single among us.</h2>
+      <h2>One <em>community</em>, working <em>together</em><br>for every single among us.</h2>
       <p class="lede">The Thornhill Shidduch Centre is an initiative of Nshei Kollel Ohr Yosef, led by a committee with real experience in shidduchim, working to make sure no single in our community is overlooked. We maintain a private registry on their behalf, and offer resources, Torah guidance, and support for parents navigating this process for the first time.</p>
       <a class="btn btn-primary" href="/register">Register a Profile</a>
     </div>
