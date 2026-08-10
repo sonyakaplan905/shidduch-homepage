@@ -46,8 +46,8 @@
   .site-banner-title{
     font-family:'Inter',sans-serif;
     font-weight:700;
-    font-size:1.9rem;
-    letter-spacing:.1em;
+    font-size:.75rem;
+    letter-spacing:.2em;
     text-transform:uppercase;
     color:var(--gold);
     margin:0;
@@ -317,8 +317,8 @@
   <section class="hero" id="home">
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
-      <h2>Working together to build <em>one database</em><br>for every single in our community.</h2>
-      <p class="lede">A private, community-maintained registry brings every local single into one place &mdash; so shadchanim have the full picture and no one is missed. The database itself is private; this site offers resources, Torah classes, and guidance for reference along the way.</p>
+      <h2>A community coming together<br>for every single among us.</h2>
+      <p class="lede">The Thornhill Shidduch Centre is an initiative of Nshei Kollel Ohr Yosef, led by a committee with real experience in shidduchim, working to make sure no single in our community is overlooked. We maintain a private registry on their behalf, and offer resources, Torah guidance, and support for parents navigating this process for the first time.</p>
       <a class="btn btn-primary" href="/register">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
@@ -353,7 +353,8 @@
       <div class="eyebrow">Our Story</div>
       <h2>Why We Started This</h2>
       <p style="line-height:1.8;">The Thornhill Shidduch Centre was born from a simple idea: every single deserves the opportunity to be known, included, and supported.</p>
-      <p style="line-height:1.8;margin-top:16px;">Created after recognizing a need within our own community, the Centre provides practical resources, Torah guidance, and a community registry for Thornhill singles. By helping maintain current information and making it easy for individuals to update their profiles, we hope to support families, assist shadchanim, and create more opportunities for meaningful connections.</p>
+      <p style="line-height:1.8;margin-top:16px;">It also grew from a common experience among parents in our community &mdash; not always knowing the nuances of how to navigate this process, from proper etiquette to the privacy involved, and not always knowing where to turn.</p>
+      <p style="line-height:1.8;margin-top:16px;">After recognizing this need within the Thornhill community, the Centre provides practical resources, Torah guidance, and a community registry for all Thornhill singles &mdash; helping support families, assist shadchanim, and create more opportunities for meaningful connections.</p>
     </div>
   </section>
 
@@ -546,6 +547,7 @@
           <ul class="directory-list">
             <li>Leah Berman Spiro (New York) &ndash; Dating Coach &ndash; <a href="tel:5166660471">(516) 666-0471</a></li>
           </ul>
+          <p style="margin-top:14px;font-size:12.5px;color:var(--muted);">Looking for more recommendations? <a href="#" onclick="document.getElementById('directoryModal').classList.remove('open');document.getElementById('contactModal').classList.add('open');return false;" style="color:var(--gold);font-weight:600;text-decoration:underline;">Email us</a> and we're happy to point you in the right direction.</p>
         </div>
 
         <div id="dirContent-specialty">
@@ -561,10 +563,10 @@
       <h2>Haskamos</h2>
       <p>This project operates with the guidance and support of local Rabbanim. Our Haskamos letter is below.</p>
     </div>
-    <div class="reveal" style="max-width:720px;margin:0 auto;">
-      <div style="border:2px dashed var(--gold-soft);border-radius:6px;background:#fff;padding:60px 30px;text-align:center;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="margin:0 auto 16px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
-        <p style="color:var(--muted);font-size:14.5px;max-width:420px;margin:0 auto;">Your scanned Haskamos letter goes here &mdash; replace <code>assets/haskamos-letter.jpg</code> with a photo or scan of the signed letter, or send it to me and I'll place it for you.</p>
+    <div class="reveal" style="max-width:600px;margin:0 auto;">
+      <div style="border:1px dashed var(--gold-soft);border-radius:6px;background:#fff;padding:28px 24px;text-align:center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="margin:0 auto 10px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+        <p style="color:var(--muted);font-size:12.5px;max-width:380px;margin:0 auto;">Haskamos letter coming soon.</p>
       </div>
     </div>
   </section>
@@ -578,7 +580,11 @@
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q">How does registering a profile work?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Complete the online form with your background, preferences, and required documents. Our team reviews every submission before it's added to our database of profiles used by local shadchanim.</p></div>
+        <div class="faq-a"><p>Complete the online form with your background and preferences &mdash; any additional information you'd like to share should go in your bio. Your profile is added to the database right away; our team may follow up for verification or clarity based on what's submitted. You'll receive an automatic email confirming your form was received &mdash; please don't submit more than once.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I register if I don't live in Thornhill?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Absolutely. While our focus is on the Thornhill community, singles from outside the area are welcome to register as well.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Is my information kept confidential?<span class="plus">+</span></button>
@@ -586,44 +592,43 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Is there a cost to register or use your resources?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Registration and our classes and coaching are offered as a community resource. We rely on donations to keep it that way &mdash; see our Donate section below.</p></div>
+        <div class="faq-a"><p>Registration and our classes and coaching are offered as a community resource, free of charge. Should you wish to make a payment, please use our donation link below.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How do I sign up for resume help or coaching?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Reach out by email and let us know what you're looking for &mdash; resume review, coaching, or a class &mdash; and we'll follow up to schedule a time.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">I'm a shadchan &mdash; how do I get access to profiles?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Email us directly and we'll be in touch about our access process for shadchanim in the community.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Want to join our shadchanim directory?<span class="plus">+</span></button>
         <div class="faq-a">
-          <p>We're always glad to welcome more shadchanim into the community network. Reach out and let us know a bit about yourself.</p>
+          <p>Reach out by email and let us know what you're looking for &mdash; resume review, coaching, or a class &mdash; and we'll follow up to schedule a time.</p>
+          <p style="margin-top:10px;font-size:13px;color:var(--muted);">Resume review is offered <span dir="rtl" lang="he" style="font-family:'Cormorant Garamond',serif;">לזכר נשמת רפאל בן נוריאל ז״ל</span> &mdash; in memory of Rafael ben Nuriel z"l.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I'm a shadchan &mdash; how do I get access to profiles or join the directory?<span class="plus">+</span></button>
+        <div class="faq-a">
+          <p>Email us directly and we'll be in touch about our access process, and about adding you to our shadchanim directory.</p>
           <a href="#" onclick="window.location.href='mailto:thethornhillshidduchcentre@gmail.com?subject=' + encodeURIComponent('I\'d like to be added as a shadchan');return false;" class="btn btn-primary" style="margin-top:10px;display:inline-block;padding:12px 24px;font-size:12px;">I'd like to be added as a shadchan</a>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Where can I go on a date in Toronto?<span class="plus">+</span></button>
-        <div class="faq-a"><p><a href="https://notanotherlounge.com/locations/?generalarea=toronto" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Not Another Lounge</a> is a great place to browse date spot ideas around Toronto &mdash; restaurants, lounges, and casual date locations, filterable by type and price. For minyan times while you're planning around a date, <a href="https://thornhillkollel.com/zemanim/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Thornhill Kollel</a> and <a href="https://www.bayt.ca/calendar" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">BAYT's website</a> keep up-to-date schedules. For all other Toronto-related dating info, <a href="https://www.tsinitiative.org/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">the Toronto Shidduch Initiative</a> is a great place to check directly.</p></div>
+        <div class="faq-a"><p><a href="https://notanotherlounge.com/locations/?generalarea=toronto" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Not Another Lounge</a> and <a href="https://shidduchshuk.com/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">ShidduchShuk</a> are great places to browse date spot ideas around Toronto &mdash; restaurants, lounges, and casual date locations, filterable by type and price. For minyan times while you're planning around a date, <a href="https://thornhillkollel.com/zemanim/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Thornhill Kollel</a> and <a href="https://www.bayt.ca/calendar" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">BAYT's website</a> keep up-to-date schedules. For all other Toronto-related dating info, <a href="https://www.tsinitiative.org/" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">the Toronto Shidduch Initiative</a> is a great place to check directly.</p></div>
       </div>
     </div>
   </section>
 
   <section class="donate-band reveal" id="donate">
     <h2>Support Our Work</h2>
-    <p>All donations support the ongoing Torah learning at Kollel Ohr Yosef. The Thornhill Shidduch Centre itself does not, and will not, solicit money.</p>
+    <p>All donations go towards Nshei Kollel Ohr Yosef. A charitable donation receipt will be issued to the maximum allowed.</p>
+    <p style="color:var(--gold-soft);font-size:12.5px;margin-top:6px;">Charitable Registration 829965524 RR0001</p>
     <a class="btn" href="https://koy.shulcloud.com/payment.php" target="_blank" rel="noopener">Donate</a>
   </section>
 
   <footer>
-    <div class="foot-inner" style="flex-direction:column;gap:6px;text-align:center;margin-bottom:24px;justify-content:center;">
-      <div dir="rtl" lang="he" style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy);">לזכר נשמת דניאל בן מאיר ז״ל &amp; רייזל ביילא בת יצחק ז״ל</div>
-    </div>
     <div class="foot-inner">
       <div>
         <div class="foot-line">A community navigating this journey together.</div>
-        <div class="foot-meta">The Thornhill Shidduch Centre &nbsp;|&nbsp; Supporting singles and families across the GTA</div>
+        <div class="foot-meta">The Thornhill Shidduch Centre &nbsp;|&nbsp; Supporting singles and their families in the Thornhill community</div>
+        <div dir="rtl" lang="he" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px;">לזכר נשמת דניאל בן מאיר ז״ל <span style="font-family:'Inter',sans-serif;">&amp;</span> רייזל ביילא בת יצחק ז״ל</div>
+        <div style="font-size:11px;letter-spacing:.04em;color:var(--muted);margin-top:6px;">In loving memory of our parents, Daniel Hadad z"l and Eva Kaplan z"l</div>
       </div>
       <a class="foot-email" href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Email Us</a>
     </div>
@@ -643,11 +648,23 @@
         <input type="email" id="ci-email" placeholder="you@example.com">
       </div>
       <div class="form-field">
+        <label for="ci-topic">What can we help with?</label>
+        <select id="ci-topic" style="width:100%;border:1px solid var(--line);border-radius:4px;padding:11px 13px;font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);background:var(--cream);">
+          <option value="">Select one (optional)</option>
+          <option value="Resume help">Resume help</option>
+          <option value="Coaching">Coaching &amp; guidance</option>
+          <option value="Torah classes">Torah classes</option>
+          <option value="Becoming a shadchan">Becoming a shadchan</option>
+          <option value="Registering a profile">Registering a profile</option>
+          <option value="General question">General question</option>
+        </select>
+      </div>
+      <div class="form-field">
         <label for="ci-message">Message</label>
         <textarea id="ci-message" placeholder="How can we help?"></textarea>
       </div>
       <button class="form-submit-btn" onclick="sendContactInquiry()">Send Inquiry</button>
-      <p class="form-note">This opens your email app with your message pre-filled to send.</p>
+      <p class="form-note">We'll get back to you at the email you provide.</p>
     </div>
   </div>
 
@@ -655,17 +672,21 @@
     <div class="modal-box form-modal" style="max-width:440px;">
       <button class="modal-close" onclick="document.getElementById('suggestModal').classList.remove('open');" aria-label="Close">&times;</button>
       <h3>Suggest a Match</h3>
-      <p class="form-sub">No name or email needed &mdash; this is completely anonymous.</p>
+      <p class="form-sub">No name or email required &mdash; this is completely anonymous unless you'd like us to follow up.</p>
       <div class="form-field">
-        <label for="sg-who">Who do you think should meet?</label>
+        <label for="sg-who">Who do you think should be matched?</label>
         <textarea id="sg-who" placeholder="Names (first names are fine)"></textarea>
       </div>
       <div class="form-field">
         <label for="sg-why">Why do you think it's a good idea?</label>
         <textarea id="sg-why" placeholder="Tell us a bit about why you think they'd be a good match"></textarea>
       </div>
+      <div class="form-field">
+        <label for="sg-email">Your email (optional)</label>
+        <input type="email" id="sg-email" placeholder="Only if you'd like us to follow up">
+      </div>
       <button class="form-submit-btn" onclick="sendSuggestion()">Send Suggestion</button>
-      <p class="form-note">This opens your email app with your suggestion pre-filled to send.</p>
+      <p class="form-note">Sent directly to our team &mdash; no email app required.</p>
     </div>
   </div>
 
@@ -769,21 +790,53 @@
   contactModal.addEventListener('click', (e) => { if (e.target === contactModal) contactModal.classList.remove('open'); });
   suggestModal.addEventListener('click', (e) => { if (e.target === suggestModal) suggestModal.classList.remove('open'); });
 
-  function sendContactInquiry(){
-    const name = document.getElementById('ci-name').value || '(not provided)';
-    const email = document.getElementById('ci-email').value || '(not provided)';
-    const message = document.getElementById('ci-message').value || '';
-    const subject = encodeURIComponent('Website Inquiry from ' + name);
-    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
-    window.location.href = 'mailto:sonyakaplan@gmail.com?subject=' + subject + '&body=' + body;
+  // ---- Direct form submission (no email app popup) ----
+  // Paste your Apps Script Web App URL below once deployed (see deployment notes).
+  // Until it's set, forms fall back to opening the email app so nothing breaks.
+  const FORM_ENDPOINT = '';
+
+  async function submitToBackend(type, data){
+    if (!FORM_ENDPOINT) return false;
+    try {
+      await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: new URLSearchParams({ type, ...data })
+      });
+      return true;
+    } catch (err) {
+      return false;
+    }
   }
 
-  function sendSuggestion(){
+  async function sendContactInquiry(){
+    const name = document.getElementById('ci-name').value || '(not provided)';
+    const email = document.getElementById('ci-email').value || '(not provided)';
+    const topic = document.getElementById('ci-topic').value || '';
+    const message = document.getElementById('ci-message').value || '';
+    const sent = await submitToBackend('contact', { name, email, topic, message });
+    if (sent) {
+      alert("Thanks — your message has been sent. We'll be in touch soon.");
+      document.getElementById('contactModal').classList.remove('open');
+    } else {
+      const subject = encodeURIComponent('Website Inquiry from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nTopic: ' + topic + '\n\n' + message);
+      window.location.href = 'mailto:thethornhillshidduchcentre@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  }
+
+  async function sendSuggestion(){
     const who = document.getElementById('sg-who').value || '';
     const why = document.getElementById('sg-why').value || '';
-    const subject = encodeURIComponent('Anonymous Shidduch Suggestion');
-    const body = encodeURIComponent('Who: ' + who + '\n\nWhy: ' + why);
-    window.location.href = 'mailto:sonyakaplan@gmail.com?subject=' + subject + '&body=' + body;
+    const email = document.getElementById('sg-email').value || '';
+    const sent = await submitToBackend('suggestion', { who, why, email });
+    if (sent) {
+      alert('Thanks — your suggestion has been sent.');
+      document.getElementById('suggestModal').classList.remove('open');
+    } else {
+      const subject = encodeURIComponent('Anonymous Shidduch Suggestion');
+      const body = encodeURIComponent('Who: ' + who + '\n\nWhy: ' + why + (email ? '\n\nSubmitter email: ' + email : ''));
+      window.location.href = 'mailto:thethornhillshidduchcentre@gmail.com?subject=' + subject + '&body=' + body;
+    }
   }
 
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ resumeModal.classList.remove('open'); shadInfoModal.classList.remove('open'); contactModal.classList.remove('open'); suggestModal.classList.remove('open'); directoryModal.classList.remove('open'); } });
