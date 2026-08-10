@@ -90,7 +90,7 @@
   .nav-links a:hover,.nav-links a.active{border-bottom-color:var(--gold);color:#fff;}
   .nav-cta{
     background:var(--gold);color:var(--navy);padding:18px 28px;
-    font-weight:700;font-size:13px;letter-spacing:.09em;white-space:nowrap;flex-shrink:0;
+    font-weight:700;font-size:13px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;flex-shrink:0;
   }
   .nav-cta:hover{background:#d9b667;}
   .burger{display:none;background:none;border:none;color:#F1EADC;font-size:24px;padding:14px 8px;}
@@ -309,7 +309,7 @@
         <li><a href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Contact</a></li>
         <li><a href="https://koy.shulcloud.com/payment.php" target="_blank" rel="noopener">Donate</a></li>
       </ul>
-    <a href="/register">Register a Profile</a>
+    <a href="/register" class="nav-cta">Register a Profile</a>
       <button class="burger" id="burgerBtn" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
@@ -317,8 +317,8 @@
   <section class="hero" id="home">
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
-      <h2>Making <em>local</em> shidduchim<br>a little easier to find.</h2>
-      <p class="lede">An online resource for Thornhill singles and families navigating the shidduch world &mdash; from resume help and coaching, to Torah classes and a trusted registry that keeps every profile organized and current for local shadchanim.</p>
+      <h2>Working together to build <em>one database</em><br>for every single in our community.</h2>
+      <p class="lede">A private, community-maintained registry brings every local single into one place &mdash; so shadchanim have the full picture and no one is missed. The database itself is private; this site offers resources, Torah classes, and guidance for reference along the way.</p>
       <a class="btn btn-primary" href="/register">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
@@ -525,23 +525,13 @@
           <ul class="directory-list">
             <li><button class="shad-name-btn" onclick="showShadchanInfo('Sara Bitterman','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:Sara.bitterman@gmail.com&quot;&gt;Sara.bitterman@gmail.com&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;tel:4164598082&quot;&gt;(416) 459-8082&lt;/a&gt;')">Sara Bitterman</button></li>
             <li><button class="shad-name-btn" onclick="showShadchanInfo('Sonya Kaplan','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:sonyakaplan@gmail.com&quot;&gt;sonyakaplan@gmail.com&lt;/a&gt;')">Sonya Kaplan</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Tzivi Koff','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Tzivi Koff</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rivky Cohen','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Rivky Cohen</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Rafi Greenspan','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;tel:6477860276&quot;&gt;(647) 786-0276&lt;/a&gt;')">Rabbi Rafi Greenspan</button></li>
           </ul>
           <div class="dir-subhead">Toronto</div>
           <ul class="directory-list">
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Malky Balter','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:malkabalter@gmail.com&quot;&gt;malkabalter@gmail.com&lt;/a&gt;')">Malky Balter</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Joely Bernstein','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:joely@palomablanca.com&quot;&gt;joely@palomablanca.com&lt;/a&gt;')">Joely Bernstein</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Batsheva Friedman','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Batsheva Friedman</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Ruth Galet','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Ruth Galet</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Shani Goldner','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;tel:4168286462&quot;&gt;(416) 828-6462&lt;/a&gt;')">Shani Goldner</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Rafi Greenspan','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;tel:6477860276&quot;&gt;(647) 786-0276&lt;/a&gt;')">Rabbi Rafi Greenspan</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Evelyn Grubner','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:egrubner@gmail.com&quot;&gt;egrubner@gmail.com&lt;/a&gt;')">Evelyn Grubner</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Julie Kaplan','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;tel:4167207115&quot;&gt;(416) 720-7115&lt;/a&gt;')">Julie Kaplan</button></li>
             <li><button class="shad-name-btn" onclick="showShadchanInfo('Miriam Leibowitz','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;tel:4169377411&quot;&gt;(416) 937-7411&lt;/a&gt;')">Miriam Leibowitz</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rivky Nadoff','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Rivky Nadoff</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Yael Rosen','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Yael Rosen</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Nechama Stern','Focus area not yet listed &mdash; contact directly to discuss.','&lt;a href=&quot;mailto:nikistern4@gmail.com&quot;&gt;nikistern4@gmail.com&lt;/a&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#6E6A6A;&quot;&gt;Please include your r&eacute;sum&eacute;, description, and photo when emailing.&lt;/span&gt;')">Nechama Stern</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Ruchi Weinles','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Ruchi Weinles</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Deborah Zrihen','Focus area not yet listed &mdash; contact via the resources above.','Contact info not yet listed.')">Deborah Zrihen</button></li>
           </ul>
         </div>
 
@@ -605,6 +595,13 @@
       <div class="faq-item">
         <button class="faq-q">I'm a shadchan &mdash; how do I get access to profiles?<span class="plus">+</span></button>
         <div class="faq-a"><p>Email us directly and we'll be in touch about our access process for shadchanim in the community.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Want to join our shadchanim directory?<span class="plus">+</span></button>
+        <div class="faq-a">
+          <p>We're always glad to welcome more shadchanim into the community network. Reach out and let us know a bit about yourself.</p>
+          <a href="#" onclick="window.location.href='mailto:thethornhillshidduchcentre@gmail.com?subject=' + encodeURIComponent('I\'d like to be added as a shadchan');return false;" class="btn btn-primary" style="margin-top:10px;display:inline-block;padding:12px 24px;font-size:12px;">I'd like to be added as a shadchan</a>
+        </div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Where can I go on a date in Toronto?<span class="plus">+</span></button>
