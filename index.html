@@ -28,32 +28,46 @@
   button{font-family:inherit;cursor:pointer;}
   .wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
 
-  /* ---------- Text Header Banner ---------- */
+  /* ---------- Header Banner ---------- */
   .site-banner{
     background-color:var(--cream);
-    text-align:center;
-    padding:1.5rem 1rem;
+    padding:1.5rem 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .site-banner-logo{
+    height:88px;
+    width:auto;
+    object-fit:contain;
+    flex-shrink:0;
+  }
+  .site-banner-text{
+    text-align:left;
   }
   .site-banner-welcome{
     font-family:'Dancing Script',cursive;
     font-weight:600;
-    font-size:1.7rem;
+    font-size:1.5rem;
     color:var(--gold);
-    margin-bottom:.15rem;
-  }
-  .site-banner-logo{
-    height:56px;
-    width:auto;
-    margin:.25rem auto;
+    line-height:1.1;
   }
   .site-banner-name{
     font-family:'Inter',sans-serif;
     font-weight:700;
-    font-size:.75rem;
-    letter-spacing:.2em;
+    font-size:.7rem;
+    letter-spacing:.18em;
     text-transform:uppercase;
     color:var(--gold);
-    margin-top:.35rem;
+    margin-top:.2rem;
+  }
+  @media (max-width:480px){
+    .site-banner{ padding:1.25rem 1rem; gap:12px; }
+    .site-banner-logo{ height:68px; }
+    .site-banner-welcome{ font-size:1.25rem; }
+    .site-banner-name{ font-size:.6rem; letter-spacing:.14em; }
   }
 
   /* ---------- Header ---------- */
@@ -291,15 +305,23 @@
     .modal-box{padding:36px 22px 30px;border-radius:0;min-height:100%;}
     .resume-doc .r-name{font-size:28px;}
     .stat .num{font-size:40px;}
+    .hero{padding-left:20px;padding-right:20px;}
+    .hero h2{font-size:30px;}
+    .hero p.lede{font-size:15px;}
+    .nav-cta{padding:14px 18px;font-size:11.5px;}
+    .directory-card{padding:20px 16px;}
+    .midquote{padding:56px 20px;}
+    .midquote p{font-size:22px;}
   }
 </style>
 </head>
 <body>
 
   <div class="site-banner">
-    <div class="site-banner-welcome">Welcome to</div>
-    <img src="assets/logo.png" alt="The Thornhill Shidduch Centre" class="site-banner-logo">
-    <div class="site-banner-name">The Thornhill Shidduch Centre</div>
+    <img src="assets/header-logo.png" alt="The Thornhill Shidduch Centre" class="site-banner-logo">
+    <div class="site-banner-text">
+      <div class="site-banner-welcome">Welcome to</div>
+    </div>
   </div>
 
   <nav class="mainnav">
