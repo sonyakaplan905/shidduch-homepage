@@ -9,14 +9,14 @@
 <style>
   :root{
     --cream:#FFFFFF;
-    --cream-deep:#EEEEEE;
-    --navy:#222831;
-    --navy-soft:#31363F;
-    --gold:#76ABAE;
-    --gold-soft:#C1D9DA;
-    --ink:#222831;
-    --muted:#5C6470;
-    --line:#DDE3E3;
+    --cream-deep:#E9ECEB;
+    --navy:#37353E;
+    --navy-soft:#44444E;
+    --gold:#715A5A;
+    --gold-soft:#DCCFCF;
+    --ink:#26242B;
+    --muted:#6E6A6A;
+    --line:#D3DAD9;
     --radius:2px;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -31,57 +31,30 @@
   /* ---------- Header Banner ---------- */
   .site-banner{
     background-color:var(--cream);
-    padding:1.5rem 32px;
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:18px;
-    flex-wrap:wrap;
+    padding:1.75rem 32px 1.5rem;
     max-width:1240px;
     margin:0 auto;
   }
-  .site-banner-logo{
-    height:88px;
-    width:auto;
-    object-fit:contain;
-    flex-shrink:0;
-  }
-  .site-banner-name-text{
+  .site-banner-title{
     font-family:'Cormorant Garamond',serif;
     font-weight:600;
-    font-size:1.9rem;
-    color:var(--navy);
+    font-size:2.6rem;
+    color:var(--ink);
     line-height:1.1;
   }
   .site-banner-project{
     font-family:'Inter',sans-serif;
-    font-size:.65rem;
-    letter-spacing:.1em;
+    font-weight:700;
+    font-size:.72rem;
+    letter-spacing:.16em;
     text-transform:uppercase;
     color:var(--muted);
-    margin-top:.3rem;
-  }
-  .site-banner-welcome{
-    font-family:'Dancing Script',cursive;
-    font-weight:600;
-    font-size:1.5rem;
-    color:var(--gold);
-    line-height:1.1;
-  }
-  .site-banner-name{
-    font-family:'Inter',sans-serif;
-    font-weight:700;
-    font-size:.7rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--gold);
-    margin-top:.2rem;
+    margin-top:.5rem;
   }
   @media (max-width:480px){
-    .site-banner{ padding:1.25rem 1rem; gap:12px; }
-    .site-banner-logo{ height:68px; }
-    .site-banner-welcome{ font-size:1.25rem; }
-    .site-banner-name{ font-size:.6rem; letter-spacing:.14em; }
+    .site-banner{ padding:1.25rem 1rem 1rem; }
+    .site-banner-title{ font-size:1.9rem; }
+    .site-banner-project{ font-size:.6rem; letter-spacing:.12em; }
   }
 
   /* ---------- Header ---------- */
@@ -332,10 +305,8 @@
 <body>
 
   <div class="site-banner">
-    <div>
-      <div class="site-banner-name-text">The Thornhill Shidduch Centre</div>
-      <div class="site-banner-project">A project of Nshei Kollel Ohr Yosef</div>
-    </div>
+    <div class="site-banner-title">The Thornhill Shidduch Centre</div>
+    <div class="site-banner-project">A Project of Nshei Kollel Ohr Yosef</div>
   </div>
 
   <nav class="mainnav">
