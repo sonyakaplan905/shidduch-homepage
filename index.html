@@ -9,14 +9,14 @@
 <style>
   :root{
     --cream:#FFFFFF;
-    --cream-deep:#E9ECEB;
-    --navy:#37353E;
-    --navy-soft:#44444E;
-    --gold:#715A5A;
-    --gold-soft:#DCCFCF;
-    --ink:#26242B;
-    --muted:#6E6A6A;
-    --line:#D3DAD9;
+    --cream-deep:#EEEEEE;
+    --navy:#222831;
+    --navy-soft:#31363F;
+    --gold:#76ABAE;
+    --gold-soft:#C1D9DA;
+    --ink:#222831;
+    --muted:#5C6470;
+    --line:#DDE3E3;
     --radius:2px;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -46,8 +46,20 @@
     object-fit:contain;
     flex-shrink:0;
   }
-  .site-banner-text{
-    text-align:left;
+  .site-banner-name-text{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:1.9rem;
+    color:var(--navy);
+    line-height:1.1;
+  }
+  .site-banner-project{
+    font-family:'Inter',sans-serif;
+    font-size:.65rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:.3rem;
   }
   .site-banner-welcome{
     font-family:'Dancing Script',cursive;
@@ -320,7 +332,10 @@
 <body>
 
   <div class="site-banner">
-    <img src="assets/header-logo.png" alt="The Thornhill Shidduch Centre" class="site-banner-logo">
+    <div>
+      <div class="site-banner-name-text">The Thornhill Shidduch Centre</div>
+      <div class="site-banner-project">A project of Nshei Kollel Ohr Yosef</div>
+    </div>
   </div>
 
   <nav class="mainnav">
