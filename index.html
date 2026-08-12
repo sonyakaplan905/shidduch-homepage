@@ -528,6 +528,17 @@
           <p>Older singles, second marriages, professionals, and more.</p>
           <span class="link">View directory</span>
         </div>
+        <div class="directory-card" onclick="openDirectoryModal('Chosson &amp; Kallah Teachers','dirContent-chossonkallah')">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="8" cy="7" r="2.5"/>
+            <path d="M8 10.5c-2.5 0-4.5 2-4.5 4.5v2h9v-2c0-2.5-2-4.5-4.5-4.5z"/>
+            <circle cx="16" cy="7" r="2.5"/>
+            <path d="M16 10.5c-2.5 0-4.5 2-4.5 4.5v2h9v-2c0-2.5-2-4.5-4.5-4.5z"/>
+          </svg>
+          <h3>Chosson &amp; Kallah Teachers</h3>
+          <p>Guidance for chassanim and kallahs ahead of the wedding.</p>
+          <span class="link">View directory</span>
+        </div>
       </div>
 
       <!-- Hidden source content for the directory popup, copied in by JS -->
@@ -563,6 +574,21 @@
 
         <div id="dirContent-specialty">
           <p style="color:var(--muted);font-size:13.5px;">List coming soon &mdash; check back shortly.</p>
+        </div>
+
+        <div id="dirContent-chossonkallah">
+          <div class="dir-subhead">Chosson Teachers</div>
+          <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">Rabbanim who teach chosson classes ahead of the wedding.</p>
+          <ul class="directory-list">
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Aaron Greenberg','Chosson teacher.','Contact info not yet listed.')">Rabbi Aaron Greenberg</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Shmuel Lescher','Chosson teacher.','Contact info not yet listed.')">Rabbi Shmuel Lescher</button></li>
+          </ul>
+          <div class="dir-subhead">Kallah Teachers</div>
+          <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">Kallah teachers who guide brides ahead of the wedding.</p>
+          <ul class="directory-list">
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Mrs. Chaya Messinger','Kallah teacher.','&lt;a href=&quot;tel:4165550100&quot;&gt;(416) 555-0100&lt;/a&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;color:#6E6A6A;&quot;&gt;Placeholder number &mdash; update with real contact info.&lt;/span&gt;')">Mrs. Chaya Messinger</button></li>
+            <li><button class="shad-name-btn" onclick="showShadchanInfo('Mrs. Miriam Greenberg','Kallah teacher.','Contact info not yet listed.')">Mrs. Miriam Greenberg</button></li>
+          </ul>
         </div>
       </div>
     </div>
