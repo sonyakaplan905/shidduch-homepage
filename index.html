@@ -329,7 +329,7 @@
     <div class="reveal">
       <div class="eyebrow">For the Community, By the Community</div>
       <h2>One <em>community</em>, working <em>together</em><br>for every single among us.</h2>
-      <p class="lede">The Thornhill Shidduch Centre is an initiative of Nshei Kollel Ohr Yosef, led by a committee of women with experience in shidduchim, working to ensure all singles are seen. We maintain a private registry on their behalf, and offer resources, Torah guidance, and support for parents navigating this process for the first time.</p>
+      <p class="lede">The Thornhill Shidduch Centre is an initiative of Nshei Kollel Ohr Yosef, led by a committee of women with experience in shidduchim, working to make sure all singles are seen. We maintain a private registry on their behalf, and offer resources, Torah guidance, and support for parents navigating this process for the first time.</p>
       <a class="btn btn-primary" href="/register">Register a Profile</a>
     </div>
     <div class="hero-art reveal">
@@ -528,7 +528,7 @@
           <p>Older singles, second marriages, professionals, and more.</p>
           <span class="link">View directory</span>
         </div>
-        <div class="directory-card" onclick="openDirectoryModal('Chosson &amp; Kallah Teachers','dirContent-chossonkallah')">
+        <div class="directory-card" onclick="document.getElementById('teacherRequestModal').classList.add('open');">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="8" cy="7" r="2.5"/>
             <path d="M8 10.5c-2.5 0-4.5 2-4.5 4.5v2h9v-2c0-2.5-2-4.5-4.5-4.5z"/>
@@ -537,7 +537,7 @@
           </svg>
           <h3>Chosson &amp; Kallah Teachers</h3>
           <p>Guidance for chassanim and kallahs ahead of the wedding.</p>
-          <span class="link">View directory</span>
+          <span class="link">Request a teacher</span>
         </div>
       </div>
 
@@ -574,21 +574,6 @@
 
         <div id="dirContent-specialty">
           <p style="color:var(--muted);font-size:13.5px;">List coming soon &mdash; check back shortly.</p>
-        </div>
-
-        <div id="dirContent-chossonkallah">
-          <div class="dir-subhead">Chosson Teachers</div>
-          <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">Rabbanim who teach chosson classes ahead of the wedding.</p>
-          <ul class="directory-list">
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Aaron Greenberg','Chosson teacher.','Contact info not yet listed.')">Rabbi Aaron Greenberg</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Rabbi Shmuel Lescher','Chosson teacher.','Contact info not yet listed.')">Rabbi Shmuel Lescher</button></li>
-          </ul>
-          <div class="dir-subhead">Kallah Teachers</div>
-          <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px;">Kallah teachers who guide brides ahead of the wedding.</p>
-          <ul class="directory-list">
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Mrs. Chaya Messinger','Kallah teacher.','&lt;a href=&quot;tel:4165550100&quot;&gt;(416) 555-0100&lt;/a&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;color:#6E6A6A;&quot;&gt;Placeholder number &mdash; update with real contact info.&lt;/span&gt;')">Mrs. Chaya Messinger</button></li>
-            <li><button class="shad-name-btn" onclick="showShadchanInfo('Mrs. Miriam Greenberg','Kallah teacher.','Contact info not yet listed.')">Mrs. Miriam Greenberg</button></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -727,6 +712,37 @@
     </div>
   </div>
 
+  <div class="modal-overlay" id="teacherRequestModal">
+    <div class="modal-box form-modal" style="max-width:440px;">
+      <button class="modal-close" onclick="document.getElementById('teacherRequestModal').classList.remove('open');" aria-label="Close">&times;</button>
+      <h3>Request a Teacher</h3>
+      <p class="form-sub">Let us know what you're looking for and we'll help connect you.</p>
+      <div class="form-field">
+        <label>I'm looking for</label>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
+          <label class="check-card" style="justify-content:flex-start;">
+            <input type="checkbox" id="tr-chosson" style="accent-color:var(--gold);width:16px;height:16px;">
+            A Chosson teacher
+          </label>
+          <label class="check-card" style="justify-content:flex-start;">
+            <input type="checkbox" id="tr-kallah" style="accent-color:var(--gold);width:16px;height:16px;">
+            A Kallah teacher
+          </label>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="tr-name">Name</label>
+        <input type="text" id="tr-name" placeholder="Your name">
+      </div>
+      <div class="form-field">
+        <label for="tr-email">Email or phone</label>
+        <input type="text" id="tr-email" placeholder="Best way to reach you">
+      </div>
+      <button class="form-submit-btn" onclick="sendTeacherRequest()">Send Request</button>
+      <p class="form-note">Sent directly to our team.</p>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="directoryModal">
     <div class="modal-box" style="max-width:480px;">
       <button class="modal-close" onclick="document.getElementById('directoryModal').classList.remove('open');" aria-label="Close">&times;</button>
@@ -824,8 +840,10 @@
 
   const contactModal = document.getElementById('contactModal');
   const suggestModal = document.getElementById('suggestModal');
+  const teacherRequestModal = document.getElementById('teacherRequestModal');
   contactModal.addEventListener('click', (e) => { if (e.target === contactModal) contactModal.classList.remove('open'); });
   suggestModal.addEventListener('click', (e) => { if (e.target === suggestModal) suggestModal.classList.remove('open'); });
+  teacherRequestModal.addEventListener('click', (e) => { if (e.target === teacherRequestModal) teacherRequestModal.classList.remove('open'); });
 
   // ---- Direct form submission (no email app popup) ----
   // Paste your Apps Script Web App URL below once deployed (see deployment notes).
@@ -876,7 +894,30 @@
     }
   }
 
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ resumeModal.classList.remove('open'); shadInfoModal.classList.remove('open'); contactModal.classList.remove('open'); suggestModal.classList.remove('open'); directoryModal.classList.remove('open'); } });
+  async function sendTeacherRequest(){
+    const wants = [];
+    if (document.getElementById('tr-chosson').checked) wants.push('Chosson Teacher');
+    if (document.getElementById('tr-kallah').checked) wants.push('Kallah Teacher');
+    if (!wants.length) {
+      alert('Please select at least one option.');
+      return;
+    }
+    const name = document.getElementById('tr-name').value || '(not provided)';
+    const contact = document.getElementById('tr-email').value || '(not provided)';
+    const looking = wants.join(' & ');
+    const subjectLine = 'Looking for a ' + looking;
+    const sent = await submitToBackend('teacherRequest', { name, contact, looking, subject: subjectLine });
+    if (sent) {
+      alert("Thanks — your request has been sent. We'll be in touch soon.");
+      document.getElementById('teacherRequestModal').classList.remove('open');
+    } else {
+      const subject = encodeURIComponent(subjectLine);
+      const body = encodeURIComponent('Name: ' + name + '\nContact: ' + contact);
+      window.location.href = 'mailto:thethornhillshidduchcentre@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  }
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ resumeModal.classList.remove('open'); shadInfoModal.classList.remove('open'); contactModal.classList.remove('open'); suggestModal.classList.remove('open'); teacherRequestModal.classList.remove('open'); directoryModal.classList.remove('open'); } });
   const burger = document.getElementById('burgerBtn');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
