@@ -873,7 +873,7 @@
   // ---- Direct form submission (no email app popup) ----
   // Paste your Apps Script Web App URL below once deployed (see deployment notes).
   // Until it's set, forms fall back to opening the email app so nothing breaks.
-  const FORM_ENDPOINT = https://script.google.com/macros/s/AKfycbwW387E6IYGujpL0gWlEAiRfcgDwGMipflkyHK-vMAEDK1H057-V7envDVZPPUhxTqNDA/exec;
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwW387E6IYGujpL0gWlEAiRfcgDwGMipflkyHK-vMAEDK1H057-V7envDVZPPUhxTqNDA/exec;'
 
   async function submitToBackend(type, data){
     if (!FORM_ENDPOINT) return false;
@@ -933,7 +933,7 @@
     const subjectLine = 'Looking for a ' + looking;
     const sent = await submitToBackend('teacherRequest', { name, contact, looking, subject: subjectLine });
     if (sent) {
-      alert("Thanks — your request has been sent. We'll be in touch soon.");
+      alert("Thank you — your request has been sent. We'll be in touch soon.");
       document.getElementById('teacherRequestModal').classList.remove('open');
     } else {
       const subject = encodeURIComponent(subjectLine);
