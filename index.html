@@ -875,7 +875,7 @@
   // ---- Direct form submission (no email app popup) ----
   // Paste your Apps Script Web App URL below once deployed (see deployment notes).
   // Until it's set, forms fall back to opening the email app so nothing breaks.
-  const FORM_ENDPOINT = '';
+  const FORM_ENDPOINT = https://script.google.com/macros/s/AKfycbwW387E6IYGujpL0gWlEAiRfcgDwGMipflkyHK-vMAEDK1H057-V7envDVZPPUhxTqNDA/exec;
 
   async function submitToBackend(type, data){
     if (!FORM_ENDPOINT) return false;
