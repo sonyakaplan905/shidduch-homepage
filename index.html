@@ -187,27 +187,23 @@
   .faq-a p{padding:0 4px 22px;color:var(--muted);font-size:14.5px;max-width:680px;}
 
   /* ---------- Footer ---------- */
-  footer{background:var(--navy);color:#fff;padding:56px 32px 40px;}
+  footer{background:var(--navy);color:#fff;padding:56px 32px 40px;text-align:center;}
   .foot-inner{max-width:1240px;margin:0 auto;}
   .foot-top{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-bottom:48px;}
-  .foot-col h4{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;margin-bottom:16px;color:#fff;}
+  .foot-col h4{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;margin-bottom:16px;color:#fff;letter-spacing:.05em;}
   .foot-col ul{list-style:none;padding:0;}
   .foot-col li{margin-bottom:8px;}
-  .foot-col a{color:#F1EADC;font-size:14px;text-decoration:none;transition:.2s;}
+  .foot-col a{color:#F1EADC;font-size:14px;font-weight:300;text-decoration:none;transition:.2s;}
   .foot-col a:hover{color:var(--gold-soft);}
   .foot-divider{border-top:1px solid rgba(255,255,255,.2);margin:40px 0;padding-top:40px;}
-  .foot-memorial{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
-  .foot-memory h5{font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:12px;color:#fff;}
-  .foot-memory p{font-size:13px;color:#F1EADC;line-height:1.8;margin-bottom:8px;}
-  .foot-memory p[lang="he"]{font-size:14px;font-family:'Cormorant Garamond',serif;}
-  .foot-mission{text-align:right;}
-  .foot-mission h5{font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:12px;color:#fff;}
-  .foot-mission p{font-size:14px;color:#F1EADC;line-height:1.8;font-style:italic;}
-  .foot-credit{text-align:center;font-size:12px;color:#F1EADC;margin-top:32px;opacity:.7;}
+  .foot-memorial{text-align:center;padding:20px 0;}
+  .foot-memory{max-width:600px;margin:0 auto;}
+  .foot-memory h5{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;margin-bottom:16px;color:#fff;letter-spacing:.05em;}
+  .foot-memory p{font-size:14px;font-weight:300;color:#F1EADC;line-height:1.6;}
+  .foot-memory p[lang="he"]{font-size:11px;font-family:'Cormorant Garamond',serif;font-weight:300;opacity:.8;}
+  .foot-credit{text-align:center;font-size:12px;font-weight:300;color:#F1EADC;margin-top:32px;opacity:.7;}
   @media (max-width:900px){
     .foot-top{grid-template-columns:repeat(2,1fr);gap:32px;}
-    .foot-memorial{grid-template-columns:1fr;gap:20px;text-align:center;}
-    .foot-mission{text-align:center;}
   }
   @media (max-width:600px){
     footer{padding:40px 20px 30px;}
@@ -637,7 +633,7 @@
   <footer>
     <div class="foot-inner">
       <div class="foot-top">
-        <div class="foot-col">
+        <div class="foot-col" style="text-align:center;">
           <h4>Explore</h4>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -645,7 +641,7 @@
             <li><a href="#resources">Resources</a></li>
           </ul>
         </div>
-        <div class="foot-col">
+        <div class="foot-col" style="text-align:center;">
           <h4>Learn</h4>
           <ul>
             <li><a href="#haskamos">Haskamos</a></li>
@@ -653,7 +649,7 @@
             <li><a href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Contact</a></li>
           </ul>
         </div>
-        <div class="foot-col">
+        <div class="foot-col" style="text-align:center;">
           <h4>Get Involved</h4>
           <ul>
             <li><a href="/register">Register a Profile</a></li>
@@ -664,19 +660,11 @@
       </div>
 
       <div class="foot-divider"></div>
-      <div class="foot-memorial">
-        <div class="foot-memory">
-          <h5>לזכר נשמת</h5>
-          <p dir="rtl" lang="he">לזכר נשמת דניאל בן מאיר ז״ל</p>
-          <p dir="rtl" lang="he">רייזל ביילא בת יצחק ז״ל</p>
-          <p style="margin-top:12px;">Daniel Hadad z"l and Eva Kaplan z"l</p>
-        </div>
-        <div class="foot-mission">
-        </div>
-      </div>
 
       <div class="foot-credit">
-        <p>The Ohr Yosef Shidduch Network &nbsp;|&nbsp; © SKC 2026</p>
+        <p>The Ohr Yosef Shidduch Network &nbsp;|&nbsp; A Community Initiative Supporting Shidduchim</p>
+        <p style="margin-top:12px;" dir="rtl" lang="he">לזכר נשמות דניאל בן מאיר ז״ל ורייזל ביילא בת יצחק ז״ל</p>
+        <p style="margin-top:8px;">© SKC 2026</p>
       </div>
     </div>
   </footer>
@@ -873,7 +861,7 @@
   // ---- Direct form submission (no email app popup) ----
   // Paste your Apps Script Web App URL below once deployed (see deployment notes).
   // Until it's set, forms fall back to opening the email app so nothing breaks.
-  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwW387E6IYGujpL0gWlEAiRfcgDwGMipflkyHK-vMAEDK1H057-V7envDVZPPUhxTqNDA/exec;'
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwW387E6IYGujpL0gWlEAiRfcgDwGMipflkyHK-vMAEDK1H057-V7envDVZPPUhxTqNDA/exec';
 
   async function submitToBackend(type, data){
     if (!FORM_ENDPOINT) return false;
@@ -933,7 +921,7 @@
     const subjectLine = 'Looking for a ' + looking;
     const sent = await submitToBackend('teacherRequest', { name, contact, looking, subject: subjectLine });
     if (sent) {
-      alert("Thank you — your request has been sent. We'll be in touch soon.");
+      alert("Thanks — your request has been sent. We'll be in touch soon.");
       document.getElementById('teacherRequestModal').classList.remove('open');
     } else {
       const subject = encodeURIComponent(subjectLine);
