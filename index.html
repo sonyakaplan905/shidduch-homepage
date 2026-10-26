@@ -262,6 +262,20 @@
   .form-submit-btn:hover{background:var(--navy-soft);}
   .form-note{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center;}
 
+  /* ---------- Torah class groups ---------- */
+  .shiur-group{margin-bottom:20px;}
+  .shiur-group:last-child{margin-bottom:0;}
+  .shiur-group h4{font-family:'Inter',sans-serif;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line);}
+
+  /* ---------- Haskama box ---------- */
+  .haskama-box{background:var(--cream-deep);border-left:3px solid var(--gold);border-radius:4px;padding:20px 22px;margin-bottom:18px;}
+  .haskama-box p{font-size:14.5px;color:var(--ink);line-height:1.7;}
+  .haskama-box p+p{margin-top:10px;}
+  .haskama-list{list-style:none;padding:0;margin:0;}
+  .haskama-list li{font-size:14px;color:var(--ink);padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;line-height:1.55;}
+  .haskama-list li:last-child{border-bottom:none;}
+  .haskama-list li::before{content:'';position:absolute;left:4px;top:18px;width:7px;height:7px;border-radius:50%;background:var(--gold);}
+
   /* ---------- Responsive ---------- */
   @media (max-width:1080px){
     .feature-grid{grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -269,7 +283,9 @@
   @media (max-width:980px){
     .quote-block{display:none;}
     .header-right{width:100%;align-items:flex-start;}
-    .hero{grid-template-columns:1fr;padding-top:50px;}
+    .hero{grid-template-columns:minmax(0,1fr);padding-top:50px;}
+    .hero>*{min-width:0;}
+    .hero-art img{max-width:100%;width:320px;}
     .hero h2{font-size:38px;}
     .resource-grid{grid-template-columns:1fr;}
     .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;display:none;}
@@ -312,7 +328,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resources">Resources</a></li>
-        <li><a href="#haskamos">Haskamos</a></li>
+        <li><a href="#" onclick="openHaskama();return false;">Haskama</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Contact</a></li>
       </ul>
@@ -371,7 +387,7 @@
         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5V4.7A2 2 0 016 3h12a1 1 0 011 1v15"/><path d="M4 19.5A2.5 2.5 0 016.5 17H19"/></svg>
         <h3>Torah Classes</h3>
         <p>Shiurim and guided learning to support singles and families through every stage of the journey.</p>
-        <a class="link" href="#resources">Explore</a>
+        <a class="link" href="#resources" onclick="openCard('card-torah');return false;">Explore</a>
       </div>
       <div class="feature-card reveal">
         <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
@@ -423,16 +439,21 @@
         </button>
         <div class="resource-body">
           <div class="resource-body-inner">
-            <ul>
-              <li><a href="https://torahanytime.com/lectures/250159" target="_blank" rel="noopener">Effort and Emuna in Dating</a> &ndash; R' Joey Haber</li>
-              <li><a href="https://torahanytime.com/lectures/154965" target="_blank" rel="noopener">Red Flags While Dating</a> &ndash; R' Joey Haber</li>
-              <li><a href="https://www.torahanytime.com/lectures/426148" target="_blank" rel="noopener">Humility to Marriage</a> &ndash; R' Joey Haber</li>
-              <li><a href="https://www.torahanytime.com/lectures/166488" target="_blank" rel="noopener">Shidduchim: It All Comes Down To Emunah</a> &ndash; R' Moshe Don Kestenbaum</li>
-              <li><a href="https://torahanytime.com/lectures/128817?seriesId=270" target="_blank" rel="noopener">Shidduchim Series Part 1: Zero Guidance</a> &ndash; R' Dovid Orlofsky</li>
-              <li><a href="https://www.torahanytime.com/lectures/358115" target="_blank" rel="noopener">Dating Advice They Don't Teach You in Hebrew School</a> &ndash; R' Gavriel Friedman</li>
-              <li><a href="https://www.torahanytime.com/lectures/158215" target="_blank" rel="noopener">Being There for Ourselves, Our Children and Others</a> &ndash; R' Elozer Bald</li>
-              <li><a href="https://www.torahanytime.com/lectures/200533" target="_blank" rel="noopener">Shedding Light on Shidduchim &ndash; Q&amp;A Panel</a></li>
-            </ul>
+            <div class="shiur-group">
+              <h4>For Singles</h4>
+              <ul>
+                <li><a href="https://torahanytime.com/lectures/250159" target="_blank" rel="noopener">Effort and Emuna in Dating</a> &ndash; R' Joey Haber</li>
+                <li><a href="https://torahanytime.com/lectures/154965" target="_blank" rel="noopener">Red Flags While Dating</a> &ndash; R' Joey Haber</li>
+                <li><a href="https://www.torahanytime.com/lectures/426148" target="_blank" rel="noopener">Humility to Marriage</a> &ndash; R' Joey Haber</li>
+                <li><a href="https://torahanytime.com/lectures/483323" target="_blank" rel="noopener">When Everyone Else is Getting Married: The Power of an Ayin Tov</a> &ndash; Charlie Harary</li>
+              </ul>
+            </div>
+            <div class="shiur-group">
+              <h4>For Parents</h4>
+              <ul>
+                <li><a href="https://meaningfulminute.org/podcast/r-tzadok-katz-the-shidduch-lie-nobody-wants-to-admit/" target="_blank" rel="noopener">The Shidduch Lie Nobody Wants to Admit</a> &ndash; R' Tzadok Katz (podcast)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -573,20 +594,6 @@
     </div>
   </section>
 
-  <section class="section" id="haskamos" style="background:var(--cream-deep);">
-    <div class="section-head reveal">
-      <div class="eyebrow">Rabbinic Guidance</div>
-      <h2>Haskamos</h2>
-      <p>This project operates with the guidance and support of local Rabbanim. Our Haskamos letter is below.</p>
-    </div>
-    <div class="reveal" style="max-width:600px;margin:0 auto;">
-      <div style="border:1px dashed var(--gold-soft);border-radius:6px;background:#fff;padding:28px 24px;text-align:center;">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="margin:0 auto 10px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
-        <p style="color:var(--muted);font-size:12.5px;max-width:380px;margin:0 auto;">Haskamos letter coming soon.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="faq">
     <div class="section-head reveal">
       <div class="eyebrow">Questions</div>
@@ -644,7 +651,7 @@
         <div class="foot-col" style="text-align:center;">
           <h4>Learn</h4>
           <ul>
-            <li><a href="#haskamos">Haskamos</a></li>
+            <li><a href="#" onclick="openHaskama();return false;">Haskama</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#" onclick="document.getElementById('contactModal').classList.add('open');return false;">Contact</a></li>
           </ul>
@@ -655,6 +662,7 @@
             <li><a href="/register">Register a Profile</a></li>
             <li><a href="#" onclick="document.getElementById('suggestModal').classList.add('open');return false;">Suggest a Match</a></li>
             <li><a href="#" onclick="document.getElementById('teacherRequestModal').classList.add('open');return false;">Request a Teacher</a></li>
+            <li><a href="#" onclick="openVolunteer();return false;">Become a Volunteer</a></li>
           </ul>
         </div>
       </div>
@@ -691,6 +699,7 @@
           <option value="Torah classes">Torah classes</option>
           <option value="Becoming a shadchan">Becoming a shadchan</option>
           <option value="Registering a profile">Registering a profile</option>
+          <option value="Volunteering / joining the committee">Volunteering / joining the committee</option>
           <option value="General question">General question</option>
         </select>
       </div>
@@ -729,7 +738,7 @@
     <div class="modal-box form-modal" style="max-width:440px;">
       <button class="modal-close" onclick="document.getElementById('teacherRequestModal').classList.remove('open');" aria-label="Close">&times;</button>
       <h3>Request a Teacher</h3>
-      <p class="form-sub">Let us know what you're looking for and we'll help connect you.</p>
+      <p class="form-sub">Let us know what you're looking for. All requests go directly to Rav Scheiner for further assistance.</p>
       <div class="form-field">
         <label>I'm looking for</label>
         <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
@@ -772,6 +781,22 @@
       <p id="shadInfoFocus" style="font-size:14px;color:var(--muted);margin-bottom:18px;"></p>
       <p style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px;">Contact</p>
       <p id="shadInfoContact" style="font-size:14px;color:var(--ink);"></p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="haskamaModal">
+    <div class="modal-box" style="max-width:520px;padding:44px 40px 36px;">
+      <button class="modal-close" onclick="document.getElementById('haskamaModal').classList.remove('open');" aria-label="Close">&times;</button>
+      <p style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px;">Rabbinic Guidance</p>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--navy);margin-bottom:18px;">Haskama</h3>
+      <div class="haskama-box">
+        <p>The Ohr Yosef Shidduch Network operates under the guidance and haskama of <strong>Rav Mordechai Scheiner <span dir="rtl" lang="he">שליט״א</span></strong>, Rosh Kollel, Kollel Ohr Yosef.</p>
+        <p>All meetings are attended by <strong>Mrs. Esti Scheiner</strong>.</p>
+      </div>
+      <ul class="haskama-list">
+        <li>Our registration form and website have been reviewed and endorsed by Rav Scheiner.</li>
+        <li>Guidance for Chosson and Kallah classes is arranged through Rav Scheiner.</li>
+      </ul>
     </div>
   </div>
 
@@ -824,7 +849,7 @@
         <p>Mrs. Katzman &ndash; Seminary Mechaneches &ndash; (972) 555-0129</p>
 
         <div class="modal-foot">
-          <a href="assets/sample-shidduch-resume-template.docx" download>Download an editable Word version</a>
+          <a href="sample-shidduch-resume-template.docx" download>Download an editable Word version</a>
         </div>
       </div>
     </div>
@@ -850,6 +875,25 @@
     shadInfoModal.classList.add('open');
   }
   resumeModal.addEventListener('click', (e) => { if (e.target === resumeModal) resumeModal.classList.remove('open'); });
+
+  const haskamaModal = document.getElementById('haskamaModal');
+  haskamaModal.addEventListener('click', (e) => { if (e.target === haskamaModal) haskamaModal.classList.remove('open'); });
+  function openHaskama(){ haskamaModal.classList.add('open'); }
+
+  function openVolunteer(){
+    document.getElementById('ci-topic').value = 'Volunteering / joining the committee';
+    document.getElementById('contactModal').classList.add('open');
+  }
+
+  // Scroll to a resource card and open it
+  function openCard(id){
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.classList.add('in');
+    if (!card.classList.contains('open')) toggleResourceCard(id);
+    const y = card.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 
   const contactModal = document.getElementById('contactModal');
   const suggestModal = document.getElementById('suggestModal');
@@ -930,7 +974,7 @@
     }
   }
 
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ resumeModal.classList.remove('open'); shadInfoModal.classList.remove('open'); contactModal.classList.remove('open'); suggestModal.classList.remove('open'); teacherRequestModal.classList.remove('open'); directoryModal.classList.remove('open'); } });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape'){ resumeModal.classList.remove('open'); shadInfoModal.classList.remove('open'); contactModal.classList.remove('open'); suggestModal.classList.remove('open'); teacherRequestModal.classList.remove('open'); directoryModal.classList.remove('open'); haskamaModal.classList.remove('open'); } });
   const burger = document.getElementById('burgerBtn');
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
